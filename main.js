@@ -60,3 +60,29 @@ challenge2(7);
 challenge2(10);
 challenge2(3);
 challenge2(2);
+
+// Challenge Three -  ------------------------
+
+function challenge3(uniqua) {
+    var seen = {};
+    var newArray = [];
+    var j = 0;
+        for(var k = 0; k < uniqua.length; k++) {
+             var item = uniqua[k];
+             if(seen[item] !== 1) {
+                   seen[item] = 1;
+                   newArray[j++] = item;
+             }
+        }
+        // return newArray;
+              var total = 0;  
+        for(var l = 0; l < newArray.length; l++)
+             total += newArray[l];
+            //  return total;   
+    var printThree = "<h1>The sum of " + uniqua + " without duplicates is: " + total + "</h1>";
+    var arrazingDiv = document.getElementById("arrazing");
+    arrazingDiv.innerHTML += printThree;   
+    }
+challenge3([ 1, 2, 3]); 
+challenge3([ 1, 3, 8, 1, 8]);
+challenge3([ -1, -1, 5, 2, -7]);
