@@ -86,3 +86,33 @@ function challenge3(uniqua) {
 challenge3([ 1, 2, 3]); 
 challenge3([ 1, 3, 8, 1, 8]);
 challenge3([ -1, -1, 5, 2, -7]);
+
+// Challenge 4 ---------------------
+var flyingCreatures = (["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]);
+var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+
+
+function challenge4(birds, weirdBirds){
+    for(var p = 0; p < birds.length; p++){
+        for(var q = 0; q < weirdBirds.length; q++){
+            var noGeese = birds.filter(weirdBirds);
+            if(birds[p] === weirdBirds[q])
+            return noGeese;
+        }      
+    }   
+    var printFour = "<h1> NO Geese Allowed Club: " + noGoose + "</h1>";
+    var gooseDiv = document.getElementById("whatGoose");
+    gooseDiv.innerHTML += printFour;
+}
+challenge4(flyingCreatures, geese);
+// function challenge4(birds, weirdBirds){
+//     var noGeese = [];
+//     for(var p = 0; p < birds.length; p++){
+//         noGeese = (birds.filter[p] !== weirdBirds);
+//         return noGeese; 
+//     }
+//     var printFour = "<h1> NO Geese Allowed Club: " + noGeese + "</h1>";
+//     var gooseDiv = document.getElementById("whatGoose");
+//     gooseDiv.innerHTML += printFour;
+// }
+
